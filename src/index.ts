@@ -39,7 +39,7 @@ app.post("/create", async (c) => {
       listingId: "1251251231",
     },
     delay: 0.1 * 60,
-    contentBasedDeduplication: false,
+    contentBasedDeduplication: true,
   });
   if (!message)
     throw new HTTPException(500, { message: "Failed to create message" });
